@@ -1,6 +1,6 @@
 <template>
-  <div class="flex">
-    <div class="my-80">
+  <div class="flex justify-center">
+    <div class="my-80 w-5/6">
       <div class="flex justify-center items-center space-x-4 mb-10">
         <input
           class="w-full h-12 rounded-lg pl-5 border"
