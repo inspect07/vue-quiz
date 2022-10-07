@@ -1,4 +1,4 @@
-interface ToastProps {
+export interface ToastProps {
   type: string;
   message: string | number;
   style?: string;

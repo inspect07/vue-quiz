@@ -44,7 +44,7 @@
 
 <script setup lang="ts">
 import { provide, ref, watch } from "vue";
-import { useToast } from "./composables/useToast";
+import { useToast, ToastProps } from "./composables/useToast";
 import Toast from "./components/Toast.vue";
 import { TOAST_KEY } from "./constants/injectionKeys";
 
@@ -56,7 +56,11 @@ const duration = ref();
 provide(TOAST_KEY, toasts);
 
 const clickToast = (type: "info" | "success" | "error") => {
-  let config = openToast({ type, message: message.value, isDisplay: true });
+  let config: ToastProps = openToast({
+    type,
+    message: message.value,
+    isDisplay: true,
+  });
   toasts.value.push(config);
   let sec = !duration.value ? 3 : duration.value;
 
