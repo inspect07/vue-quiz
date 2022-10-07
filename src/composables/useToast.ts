@@ -29,7 +29,7 @@ export function useToast() {
     return config;
   };
 
-  const destroyToast = (toasts: any) => {
+  const destroyToast = (toasts: ToastProps[]) => {
     toasts.map((toast: ToastProps) => {
       toast.isDisplay = false;
     });
